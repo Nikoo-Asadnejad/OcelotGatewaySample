@@ -10,11 +10,12 @@
       ],
       "DownstreamPathTemplate": "/api/users",
       "DownstreamScheme": "http",
+      "SwaggerKey": "users",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 5175
-        }
+        },
       ]
     },
     {
@@ -24,6 +25,7 @@
       ],
       "DownstreamPathTemplate": "/api/products",
       "DownstreamScheme": "http",
+      "SwaggerKey": "products",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
@@ -31,6 +33,36 @@
         }
       ]
     }
-    
+  ],
+  "FileCacheOptions": {
+    "TtlSeconds": 10
+  },
+  "RateLimitOptions": {
+    "EnableRateLimiting": true,
+    "Period": "1s",
+    "PeriodTimespan": 10,
+    "Limit": 3
+  },
+  "SwaggerEndPoints": [
+    {
+      "Key": "users",
+      "Config": [
+        {
+          "Name": "User API",
+          "Version": "v1",
+          "Url": "http://localhost:5175/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "products",
+      "Config": [
+        {
+          "Name": "Product API",
+          "Version": "v1",
+          "Url": "http://localhost:5155/swagger/v1/swagger.json"
+        }
+      ]
+    }
   ]
 }
