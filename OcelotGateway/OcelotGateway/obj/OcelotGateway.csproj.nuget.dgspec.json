@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[19.0.2, )"
             },
+            "Ocelot.Cache.CacheManager": {
+              "target": "Package",
+              "version": "[19.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
