@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration)
-    .AddCacheManager(x => { x.WithDictionaryHandle(); });
+                 .AddCacheManager(x => { x.WithDictionaryHandle(); });
 builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
 var app = builder.Build();
